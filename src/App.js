@@ -1,10 +1,23 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AppLayout from "./Components/AppLayout";
+import Base from "./Components/Base";
 
 function App() {
-  return (
-    <h1 className='text-3xl font-bold underline text-cyan-800'>Hello world!</h1>
-  );
+  return <RouterProvider router={appRouter}></RouterProvider>;
 }
+
+const appRouter = createBrowserRouter([
+  {
+    element: <AppLayout></AppLayout>,
+    children: [
+      {
+        path: "/",
+        element: <Base />,
+      },
+    ],
+  },
+]);
 
 export default App;
