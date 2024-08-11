@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        customBlue: "#032d40",
+      },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"], // Add Inter to the font family list
+      },
+    },
   },
   plugins: [],
 };
